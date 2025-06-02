@@ -101,59 +101,6 @@ export default {
 				'sketch-draw': {
 					'0%': { 'stroke-dashoffset': '100' },
 					'100%': { 'stroke-dashoffset': '0' },
-				},
-				'float': {
-					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-10px)' },
-				},
-				'fadeInOut': {
-					'0%, 100%': { opacity: '0.3' },
-					'50%': { opacity: '0.8' },
-				},
-				'typewriter': {
-					'0%': { width: '0' },
-					'100%': { width: '100%' },
-				},
-				'slideInUp': {
-					'0%': { transform: 'translateY(30px)', opacity: '0' },
-					'100%': { transform: 'translateY(0)', opacity: '1' },
-				},
-				'slideInLeft': {
-					'0%': { transform: 'translateX(-30px)', opacity: '0' },
-					'100%': { transform: 'translateX(0)', opacity: '1' },
-				},
-				'fadeIn': {
-					'0%': { opacity: '0' },
-					'100%': { opacity: '1' },
-				},
-				'heartbeat': {
-					'0%, 100%': { transform: 'scale(1) rotate(12deg)' },
-					'50%': { transform: 'scale(1.1) rotate(12deg)' },
-				},
-				'drawArrow': {
-					'0%': { 'stroke-dashoffset': '40' },
-					'50%': { 'stroke-dashoffset': '0' },
-					'100%': { 'stroke-dashoffset': '40' },
-				},
-				'twinkle': {
-					'0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
-					'50%': { opacity: '0.8', transform: 'scale(1.2)' },
-				},
-				'lightUp': {
-					'0%, 100%': { opacity: '0.6', filter: 'brightness(1)' },
-					'50%': { opacity: '1', filter: 'brightness(1.5)' },
-				},
-				'writeIn': {
-					'0%': { width: '0', opacity: '0' },
-					'100%': { width: '100%', opacity: '1' },
-				},
-				'rotate': {
-					'0%': { transform: 'rotate(0deg)' },
-					'100%': { transform: 'rotate(360deg)' },
-				},
-				'grow': {
-					'0%': { height: '0' },
-					'100%': { height: '2rem' },
 				}
 			},
 			animation: {
@@ -161,19 +108,6 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'wiggle': 'wiggle 0.5s ease-in-out',
 				'sketch-draw': 'sketch-draw 2s ease-in-out',
-				'float': 'float 6s ease-in-out infinite',
-				'fadeInOut': 'fadeInOut 4s ease-in-out infinite',
-				'typewriter': 'typewriter 2s ease-out',
-				'slideInUp': 'slideInUp 1s ease-out',
-				'slideInLeft': 'slideInLeft 1s ease-out',
-				'fadeIn': 'fadeIn 1s ease-out',
-				'heartbeat': 'heartbeat 2s ease-in-out infinite',
-				'drawArrow': 'drawArrow 3s ease-in-out infinite',
-				'twinkle': 'twinkle 2s ease-in-out infinite',
-				'lightUp': 'lightUp 3s ease-in-out infinite',
-				'writeIn': 'writeIn 2s ease-out',
-				'rotate': 'rotate 10s linear infinite',
-				'grow': 'grow 2s ease-in-out infinite',
 			}
 		}
 	},
