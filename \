@@ -9,9 +9,9 @@ import {
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-20">
+    <section className="relative overflow-hidden pt-20">
       {/* Enhanced background decorative elements */}
-      <div className="absolute inset-0 UMR opacity-10">
+      <div className="absolute inset-0 opacity-10">
         {/* Animated coffee stain effect */}
         <div className="absolute top-20 left-10 w-16 h-16 bg-warm rounded-full opacity-30 blur-sm animate-pulse"></div>
         <div className="absolute top-24 left-14 w-8 h-8 bg-warm rounded-full opacity-20 blur-sm animate-bounce"></div>
@@ -53,7 +53,7 @@ const Hero = () => {
       </div>
 
       {/* Main content container */}
-      <div className="container mx-auto px-6 text-center relative z-10 flex-1 flex items-center">
+      <div className="container mx-auto px-6 text-center relative z-10 min-h-screen flex flex-col justify-center">
         <div className="max-w-6xl mx-auto">
           {/* Profile Photo Section with minimal decorations */}
           <div className="mb-12 flex flex-col items-center animate-fade-in">
@@ -63,10 +63,10 @@ const Hero = () => {
                 {/* Single handwriting-style frame decoration */}
                 <div className="absolute -inset-3 border-2 border-warm border-dashed opacity-40 transform rotate-2 rounded-lg animate-wiggle"></div>
 
-                {/* Profile photo - Removed background and rounded corners */}
-                <div className="w-full h-full overflow-hidden transform group-hover:scale-105 transition-all duration-300 relative">
+                {/* Profile photo */}
+                <div className="w-full h-full rounded-lg overflow-hidden shadow-2xl transform group-hover:scale-105 transition-all duration-300 relative">
                   <img
-                    src="https://api.removal.ai/download/g1/preview/b48eac94-a11e-47d5-a456-0bdd10f8171d.png"
+                    src="/lovable-uploads/42c79e19-5093-44f3-96b4-284e6a2be0ad.png"
                     alt="Muhammad Mahathir Profile"
                     className="w-full h-full object-cover filter group-hover:brightness-110 transition-all duration-300"
                   />
@@ -165,13 +165,13 @@ const Hero = () => {
           </div>
 
           {/* Enhanced CTA Buttons with hover animations */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up delay-300 mb-20">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-up delay-300">
             <a
               href="#projects"
               className="bg-warm text-cream px-8 py-4 rounded-none font-sketch text-lg transition-all duration-300 shadow-lg relative hover:transform hover:translate-y-[-2px] hover:shadow-xl group w-full sm:w-auto"
             >
               <span className="relative z-10">View My Work</span>
-              <span className="inline-block ml-2 transform group-hover:translate{prop}x-1 transition-transform relative z-10">
+              <span className="inline-block ml-2 transform group-hover:translate-x-1 transition-transform relative z-10">
                 →
               </span>
               <div className="absolute -top-1 -right-1 w-2 h-2 bg-sketch rounded-full opacity-20"></div>
@@ -187,33 +187,61 @@ const Hero = () => {
             </a>
           </div>
         </div>
+
+        {/* Spacer to push scroll indicator below content */}
+        <div className="h-44"></div>
       </div>
 
-      {/* Spacer to push scroll indicator below content */}
-      <div className="h-16"></div>
-
-      {/* Enhanced scroll indicator at the bottom with slower animations */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 w-full flex justify-center">
+      {/* Enhanced scroll indicator at the bottom */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20 w-full flex justify-center py-6">
         <div className="flex flex-col items-center group cursor-pointer">
           {/* Decorative scroll text */}
-          <div className="mb-2 opacity-70 group-hover:opacity-100 transition-opacity">
-            <span className="font-handwrite text-warm text-sm animate-pulse [animation-duration:2s]">
+          <div className="mb-3 opacity-60 group-hover:opacity-100 transition-opacity">
+            <span className="font-handwrite text-warm text-sm animate-pulse">
               Scroll Down
             </span>
           </div>
 
           {/* Main scroll indicator container */}
           <div className="relative">
-            {/* Animated border frame - Slower spin */}
-            <div className="absolute -inset-1 border border-warm border-dashed rounded-full opacity-20 animate-spin-slow [animation-duration:8s]"></div>
+            {/* Animated border frame */}
+            <div className="absolute -inset-2 border border-warm border-dashed rounded-full opacity-30 animate-spin-slow"></div>
 
-            {/* Main circle with arrow - Slower bounce */}
-            <div className="w-10 h-10 border-2 border-warm rounded-full flex items-center justify-center bg-cream/10 backdrop-blur-sm group-hover:bg-warm group-hover:text-cream transition-all duration-300 animate-bounce [animation-duration:2s]">
+            {/* Main circle with arrow */}
+            <div className="w-12 h-12 border-2 border-warm rounded-full flex items-center justify-center bg-cream/10 backdrop-blur-sm group-hover:bg-warm group-hover:text-cream transition-all duration-300 animate-bounce">
               <ArrowDown
-                className="animate-pulse group-hover:animate-bounce [animation-duration:2s]"
-                size={16}
+                className="animate-pulse group-hover:animate-bounce"
+                size={20}
               />
             </div>
+
+            {/* Handwriting doodles around the indicator */}
+            <div className="absolute -top-1 -right-2 w-1 h-1 bg-warm rounded-full opacity-40 animate-ping"></div>
+            <div className="absolute -bottom-1 -left-2 w-1 h-1 bg-warm rounded-full opacity-40 animate-ping delay-500"></div>
+          </div>
+
+          {/* Animated line below */}
+          <div className="mt-3 w-px h-8 bg-gradient-to-b from-warm to-transparent opacity-50 animate-expand"></div>
+
+          {/* Bottom decorative element */}
+          <div className="mt-1">
+            <svg
+              width="20"
+              height="10"
+              viewBox="0 0 20 10"
+              className="text-warm opacity-30"
+            >
+              <path
+                d="M2,5 Q10,2 18,5"
+                stroke="currentColor"
+                strokeWidth="1"
+                fill="none"
+                strokeLinecap="round"
+                className="animate-sketch-draw"
+                strokeDasharray="20"
+                strokeDashoffset="20"
+              />
+            </svg>
           </div>
         </div>
       </div>
